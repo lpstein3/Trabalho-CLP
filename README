@@ -1,9 +1,9 @@
-# Visualizador do Fractal de Mandelbrot com Python e C
+# Visualizador do Fractal de Burning Ship com Python e C
 
 
 ## Por que escolhemos essas linguagens?
 
-Precisávamos de uma interface gráfica rápida de desenvolver e de fácil utilização, por isso utilizamos Python com Tkinter. Já para o cálculo do conjunto de Mandelbrot, que exige milhões de operações matemáticas em ponto flutuante, optamos por C, aproveitando seu desempenho superior em tarefas computacionalmente intensivas.
+Precisávamos de uma interface gráfica rápida de desenvolver e de fácil utilização, por isso utilizamos Python com Tkinter. Já para o cálculo do conjunto de Burning Ship, que exige milhões de operações matemáticas em ponto flutuante, optamos por C, aproveitando seu desempenho superior em tarefas computacionalmente intensivas.
 
 A separação entre interface e processamento também permitiu explorar o principal objetivo do trabalho: a integração entre linguagens de programação com características diferentes.
 
@@ -11,7 +11,7 @@ A separação entre interface e processamento também permitiu explorar o princi
 
 ## Funcionalidades
 
-- Geração do fractal de Mandelbrot.
+- Geração do fractal de Burning Ship.
 - Interface gráfica desenvolvida em Python.
 - Processamento do fractal realizado em C.
 - Ajuste de parâmetros de visualização:
@@ -41,7 +41,7 @@ Essa abordagem evita cópias desnecessárias de memória e permite que o process
 
 ## Estrutura do Projeto
 ```text
-mandelbrot-app/
+Brain Ship-app/
 ├── README.md
 ├── Makefile
 ├── src/
