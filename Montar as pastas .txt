@@ -1,0 +1,10 @@
+mandelbrot-app/
+├── README.md          (você já tem, com o conteúdo completo)
+├── Makefile           (renomeie o Makefile.mk para Makefile)
+├── src/
+│   ├── mandelbrot.c   (código C, sem chave extra)
+│   └── mandelbrot.h   (protótipo)
+├── gui/
+│   └── main.py        (interface Python)
+└── doc/
+    └── documentacao.pdf   (você ainda precisa gerar a partir do .docx)

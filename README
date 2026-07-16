@@ -1,0 +1,80 @@
+# Visualizador do Fractal de Mandelbrot com Python e C
+
+
+## Por que escolhemos essas linguagens?
+
+Precisávamos de uma interface gráfica rápida de desenvolver e de fácil utilização, por isso utilizamos Python com Tkinter. Já para o cálculo do conjunto de Mandelbrot, que exige milhões de operações matemáticas em ponto flutuante, optamos por C, aproveitando seu desempenho superior em tarefas computacionalmente intensivas.
+
+A separação entre interface e processamento também permitiu explorar o principal objetivo do trabalho: a integração entre linguagens de programação com características diferentes.
+
+---
+
+## Funcionalidades
+
+- Geração do fractal de Mandelbrot.
+- Interface gráfica desenvolvida em Python.
+- Processamento do fractal realizado em C.
+- Ajuste de parâmetros de visualização:
+  - Resolução da imagem;
+  - Centro do plano complexo;
+  - Nível de zoom;
+  - Número máximo de iterações.
+- Zoom interativo através de cliques na imagem.
+
+---
+
+## Integração entre Python e C
+
+A comunicação entre os módulos é realizada utilizando a biblioteca padrão ctypes do Python.
+
+O fluxo de execução é o seguinte:
+
+1. O Python carrega a biblioteca dinâmica gerada a partir do código C (`.dll` no Windows ou `.so` no Linux).
+2. O Python aloca um buffer de memória para armazenar os pixels da imagem.
+3. O endereço desse buffer é enviado para a função implementada em C.
+4. O código C calcula o fractal e preenche diretamente o buffer RGB.
+5. O Python converte os dados gerados em uma imagem e a exibe na interface gráfica.
+
+Essa abordagem evita cópias desnecessárias de memória e permite que o processamento pesado seja executado diretamente pelo código compilado.
+
+---
+
+## Estrutura do Projeto
+```text
+mandelbrot-app/
+├── README.md
+├── Makefile
+├── src/
+│   ├── mandelbrot.c
+│   ├── mandelbrot.h
+│   └── libmandel.dll
+├── gui/
+│   └── main.py
+├── documentacao.pdf
+└── output
+```
+
+## Dependências
+
+- Python 3.6+
+- Tkinter (geralmente já vem com o Python)
+- Pillow: `pip install pillow`
+- Compilador C (gcc ou clang) e make
+
+## Compilação
+
+instale a biblioteca: `pip install pillow`
+
+No diretório raiz, execute:
+
+```bash
+
+gcc -Wall -O3 -shared -o src/libmandel.dll src/mandelbrot.c 
+
+Execute python gui/main.py.
+
+```
+## Autores 
+
+- Lucas Stein
+- Valtair Augusto
