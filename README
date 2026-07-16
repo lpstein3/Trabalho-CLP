@@ -69,9 +69,11 @@ No diretório raiz, execute:
 
 ```bash
 
-gcc -Wall -O3 -shared -o src/libmandel.dll src/mandelbrot.c 
-
-Execute python gui/main.py.
+make 
+```
+Depois execute:
+```bash
+ python gui/main.py.
 
 ```
 ## Autores 
